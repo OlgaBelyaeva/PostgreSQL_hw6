@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     session.commit()
 
-    search = input("Введите название издателя: ")
+    search = input("Введите название или идентификатор издателя: ")
     for el in (session.query(Publisher, Book, Stock, Shop)
         .filter(Book.id_publisher == Publisher.id)
         .filter(Stock.id_book == Book.id)

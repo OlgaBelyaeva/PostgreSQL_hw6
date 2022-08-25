@@ -28,8 +28,6 @@ class Book(Base):
         return f'Book {self.id}: ({self.title, self.id_publisher})'
 
 
-# Между книгой и складом связь многие ко многим, т.е. надос сделать промежуточную таблицу и почитать как оформить связи - см вкладуку
-
 class Stock(Base):
     __tablename__ = 'stock'
 
